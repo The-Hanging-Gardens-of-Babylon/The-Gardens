@@ -18,7 +18,7 @@ const StyleSelector = ( { activeStyle, thumbnailArray, updateActive} ) => {
                 name={photo.style_id}
                 src={photo.image}
                 onClick={(e)=>updateActive(e)}
-                className='border-4 border-gray-400 rounded-full w-20 h-20 cursor-pointer p-1'
+                className='border-4 border-gray-400 hover:border-green-300 rounded-full w-20 h-20 cursor-pointer p-1'
                 />
               </div>
               )
