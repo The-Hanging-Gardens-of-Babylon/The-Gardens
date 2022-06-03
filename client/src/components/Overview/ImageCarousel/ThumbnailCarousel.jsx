@@ -35,7 +35,7 @@ const ThumbnailCarousel = ( { thumbnailUrl } ) => {
             <div className='absolute top-1/2 right-8 z-10 cursor-pointer select-none text-5xl'>
                 <FaArrowAltCircleRight onClick={nextSlide}/>
             </div>
-            <div className='grid grid-cols-6 gap-2 pt-4'>
+            <div className='grid grid-cols-6 pt-4'>
               {thumbnailUrl.map((image, index) => {
                 return (
                   <>
@@ -49,7 +49,7 @@ const ThumbnailCarousel = ( { thumbnailUrl } ) => {
                         index === current + 6 ||
                         index === current + 7 ||
                         index === current + 8) && (<img key={index} src={image} alt='random image'
-                      className='-z-5 rounded-md h-32 w-32 col-span-1'/>)}
+                      className='-z-5 rounded-md h-32 w-32 col-span-1 m-auto'/>)}
                   </>
                 )
               })}

@@ -5,8 +5,7 @@ import Logo from './Logo.jsx';
 const Headline = (props) => {
   //log here
   return (
-    <div className="relative h-11 justify-content pt-2">
-
+    <div className="relative h-11 justify-content">
       <div className='float-left'>
         <Logo />
       </div>

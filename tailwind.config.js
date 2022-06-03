@@ -18,6 +18,14 @@ module.exports = {
       }
     },
   },
+  animation: {
+    shine: "shine 1s",
+  },
+  keyframes: {
+    shine: {
+      "100%": { left: "125%" },
+    },
+  },
   plugins: [
     //require('@tailwindcss/aspect-ratio'),
     require('ps-scrollbar-tailwind'),
