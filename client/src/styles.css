@@ -45,7 +45,21 @@
     background: #CC99FF;
   }
 }
+#imageContainer {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* position: relative; */
+  height: 600px;
+  object-fit: cover;
 
+}
+#mainImage {
+  margin: 0 auto;
+  width: auto;
+  /* position: absolute; */
+  background-size: cover;
+}
 
 #Question {
   padding: 0.5px;
