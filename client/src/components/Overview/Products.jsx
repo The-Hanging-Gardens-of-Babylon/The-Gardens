@@ -5,6 +5,7 @@ import BagInteractButtons from './BagButtons/BagInteractButtons.jsx';
 import StyleSelector from './StyleSelector/StyleSelector.jsx';
 import ProductInfo from './StyleSelector/ProductInfo.jsx';
 import ProductBlurb from './ProductDesc/ProductBlurb.jsx';
+import ThumbnailCarousel from './ImageCarousel/ThumbnailCarousel.jsx';
 
 const axios = require('axios');
 
@@ -150,7 +151,6 @@ class Products extends React.Component {
         <div className="grid grid-cols-5 gap-4 h-full">
           <div className='flex flex-col col-span-4 justify-center'>
             <ImageCarousel activeStyle={this.state.activeStyle} />
-
           </div>
           <div className='relative grid grid-cols-1 justify-center'>
 

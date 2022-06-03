@@ -13,6 +13,10 @@ const ImageCarousel = ({ activeStyle }) => {
     return photo.url;
   });
 
+  const thumbnailUrl = activeStyle[0].photos.map(photo => {
+    return photo.thumbnail_url;
+  });
+
   // State Hooks
   const [current, setCurrent] = useState(0);
   const length = photoUrl.length;
@@ -34,7 +38,7 @@ const ImageCarousel = ({ activeStyle }) => {
 
   //  Carousel Construct
   return (
-    <>
+
     <section className='relative flex flex-col justify-center max-h-full overflow-hidden'>
       <div className="flex flex-col justify-center max-h-min w-full overflow-hidden object-cover object-bottom">
         <div className='absolute top-1/2 left-8 z-10 cursor-pointer select-none text-5xl'>
@@ -56,11 +60,12 @@ const ImageCarousel = ({ activeStyle }) => {
           )
         })}
       </div>
+
+      <div className="pt-10">
+        <ThumbnailCarousel thumbnailUrl={thumbnailUrl}/>
+      </div>
     </section>
-    <div>
-    <ThumbnailCarousel />
-  </div>
-  </>
+
   )
 };
 
