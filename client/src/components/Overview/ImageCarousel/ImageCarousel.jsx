@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 const axios = require('axios');
+import ThumbnailCarousel from './ThumbnailCarousel.jsx';
 
 const ImageCarousel = ({ activeStyle }) => {
   //Data Check
@@ -33,6 +34,7 @@ const ImageCarousel = ({ activeStyle }) => {
 
   //  Carousel Construct
   return (
+    <>
     <section className='relative flex flex-col justify-center max-h-full overflow-hidden'>
       <div className="flex flex-col justify-center max-h-min w-full overflow-hidden object-cover object-bottom">
         <div className='absolute top-1/2 left-8 z-10 cursor-pointer select-none text-5xl'>
@@ -55,6 +57,10 @@ const ImageCarousel = ({ activeStyle }) => {
         })}
       </div>
     </section>
+    <div>
+    <ThumbnailCarousel />
+  </div>
+  </>
   )
 };
 
