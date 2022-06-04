@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React , { Fragment, useRef, useState, useContext } from 'react';
+import React, { Fragment, useRef, useState, useContext } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import {data} from '../Overview/StyleSelector/StyleSelector.jsx';
+import { data } from '../Overview/StyleSelector/StyleSelector.jsx';
 
 
 
@@ -11,8 +11,6 @@ export default function Modal({ toggleModal, compareCardId, cards }) {
 
   const currentCard = cards[0]
   const compareCard = cards.find((element) => element.id === compareCardId);
-
-
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -71,14 +69,14 @@ export default function Modal({ toggleModal, compareCardId, cards }) {
                                 compareCard.features === undefined ?
                                   <>
                                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <td className="px-6 py-4">
-                                    </td>
-                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                      {feature.feature}
-                                    </th>
-                                    <td className="px-6 py-4">
-                                      {feature.value}
-                                    </td>
+                                      <td className="px-6 py-4">
+                                      </td>
+                                      <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                        {feature.feature}
+                                      </th>
+                                      <td className="px-6 py-4">
+                                        {feature.value}
+                                      </td>
                                     </tr>
                                   </>
                                   :
@@ -105,15 +103,6 @@ export default function Modal({ toggleModal, compareCardId, cards }) {
                                   )
 
                               }
-                              {/*   <td className="px-6 py-4">
-                                </td>
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                  Apple MacBook Pro 17"
-                                </th>
-                                <td className="px-6 py-4">
-                                  Laptop
-                                </td> */}
-
                             </tbody>
                           </table>
                         </div>
@@ -129,7 +118,6 @@ export default function Modal({ toggleModal, compareCardId, cards }) {
                   >
                     Close
                   </button>
-
                 </div>
               </Dialog.Panel>
             </Transition.Child>
